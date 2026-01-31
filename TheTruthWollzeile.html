@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Truth Wollzeile | Specialty Coffee & Desserts in Vienna</title>
+    <meta name="description" content="The Truth Wollzeile - Specialty coffee shop and dessert café in Vienna's historic first district. Famous for San Sebastián cheesecake and premium Italian coffee.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-cream: #F5F0E8;
+            --color-brown: #3D2B1F;
+            --color-gold: #C9A962;
+            --color-dark: #1A1A1A;
+            --color-light: #FFFFFF;
+            --color-gray: #6B6B6B;
+            --font-serif: 'Cormorant Garamond', Georgia, serif;
+            --font-sans: 'Montserrat', 'Helvetica Neue', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--color-cream);
+            color: var(--color-dark);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(245, 240, 232, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--color-brown);
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--color-dark);
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-gold);
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 2px;
+            background: var(--color-brown);
+            transition: all 0.3s ease;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, var(--color-cream) 0%, #E8E0D5 100%);
+            padding: 6rem 2rem 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C9A962' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            font-size: 0.75rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--color-gold);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .hero h1 {
+            font-family: var(--font-serif);
+            font-size: clamp(3rem, 8vw, 5.5rem);
+            font-weight: 400;
+            color: var(--color-brown);
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--color-gray);
+            max-width: 500px;
+            margin: 0 auto 2.5rem;
+            font-weight: 300;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: 2px solid var(--color-brown);
+            color: var(--color-brown);
+            background: transparent;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: var(--color-brown);
+            color: var(--color-cream);
+        }
+
+        .btn-primary {
+            background: var(--color-brown);
+            color: var(--color-cream);
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--color-brown);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 6rem 2rem;
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-family: var(--font-serif);
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 400;
+            color: var(--color-brown);
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: var(--color-gray);
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+
+        .divider {
+            width: 60px;
+            height: 2px;
+            background: var(--color-gold);
+            margin: 1.5rem auto;
+        }
+
+        /* About Section */
+        .about {
+            background: var(--color-light);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image-main {
+            width: 100%;
+            height: 500px;
+            background: linear-gradient(145deg, #D4C4A8 0%, #B8A88C 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-serif);
+            font-size: 4rem;
+            color: var(--color-brown);
+        }
+
+        .about-image-accent {
+            position: absolute;
+            bottom: -2rem;
+            right: -2rem;
+            width: 150px;
+            height: 150px;
+            background: var(--color-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: var(--color-light);
+        }
+
+        .rating-number {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        .rating-text {
+            font-size: 0.7rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .about-content h3 {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            font-weight: 400;
+            color: var(--color-brown);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-content p {
+            color: var(--color-gray);
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+
+        .about-features {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature {
+            text-align: center;
+        }
+
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .feature-text {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--color-brown);
+        }
+
+        /* Menu Section */
+        .menu {
+            background: var(--color-cream);
+        }
+
+        .menu-categories {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .menu-category {
+            background: var(--color-light);
+            padding: 3rem 2rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .menu-category:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .menu-category h3 {
+            font-family: var(--font-serif);
+            font-size: 1.75rem;
+            font-weight: 500;
+            color: var(--color-brown);
+            margin-bottom: 1rem;
+        }
+
+        .menu-category p {
+            color: var(--color-gray);
+            font-size: 0.95rem;
+            font-weight: 300;
+            line-height: 1.7;
+        }
+
+        .menu-tag {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 0.5rem 1rem;
+            background: var(--color-cream);
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--color-gold);
+        }
+
+        /* Signature Section */
+        .signature {
+            background: var(--color-brown);
+            color: var(--color-light);
+            text-align: center;
+        }
+
+        .signature h2 {
+            font-family: var(--font-serif);
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+
+        .signature p {
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.85;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+
+        .cheesecake-flavors {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .flavor {
+            text-align: center;
+        }
+
+        .flavor-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+
+        .flavor-circle.classic {
+            background: linear-gradient(145deg, #F5E6C8, #E8D4A8);
+        }
+
+        .flavor-circle.pistachio {
+            background: linear-gradient(145deg, #93C47D, #6AA84F);
+        }
+
+        .flavor-circle.chocolate {
+            background: linear-gradient(145deg, #5C4033, #3D2B1F);
+        }
+
+        .flavor-name {
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .dietary-info {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .dietary-badges {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .dietary-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+
+        /* Reviews Section */
+        .reviews {
+            background: var(--color-light);
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .review-card {
+            background: var(--color-cream);
+            padding: 2.5rem;
+            position: relative;
+        }
+
+        .review-quote {
+            font-size: 3rem;
+            color: var(--color-gold);
+            opacity: 0.5;
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        .review-text {
+            font-style: italic;
+            color: var(--color-gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .review-stars {
+            color: var(--color-gold);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+        }
+
+        .review-author {
+            font-weight: 500;
+            color: var(--color-brown);
+            font-size: 0.9rem;
+        }
+
+        /* Location Section */
+        .location {
+            background: var(--color-cream);
+        }
+
+        .location-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .location-info h3 {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            font-weight: 400;
+            color: var(--color-brown);
+            margin-bottom: 2rem;
+        }
+
+        .info-item {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            align-items: flex-start;
+        }
+
+        .info-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--color-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        .info-content h4 {
+            font-weight: 600;
+            color: var(--color-brown);
+            margin-bottom: 0.25rem;
+            font-size: 1rem;
+        }
+
+        .info-content p {
+            color: var(--color-gray);
+            font-weight: 300;
+        }
+
+        .info-content a {
+            color: var(--color-gray);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .info-content a:hover {
+            color: var(--color-gold);
+        }
+
+        .location-map {
+            background: var(--color-light);
+            height: 100%;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .location-map iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 400px;
+            border: none;
+        }
+
+        .amenities {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .amenity {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: var(--color-light);
+            font-size: 0.85rem;
+            color: var(--color-gray);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--color-dark);
+            color: var(--color-light);
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .footer-brand h3 {
+            font-family: var(--font-serif);
+            font-size: 1.75rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+
+        .footer-brand p {
+            opacity: 0.7;
+            font-weight: 300;
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        .footer-links h4,
+        .footer-hours h4 {
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            color: var(--color-gold);
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: var(--color-light);
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        .footer-hours p {
+            opacity: 0.7;
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 3rem auto 0;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            opacity: 0.5;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .about-grid,
+            .location-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .about-image {
+                order: -1;
+            }
+
+            .about-image-accent {
+                right: 2rem;
+            }
+
+            .menu-categories,
+            .reviews-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-brand {
+                grid-column: span 2;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--color-cream);
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1.5rem;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .menu-categories,
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-features {
+                flex-wrap: wrap;
+            }
+
+            .cheesecake-flavors {
+                gap: 2rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .footer-brand {
+                grid-column: auto;
+            }
+
+            section {
+                padding: 4rem 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-features {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .dietary-badges {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .amenities {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">THE TRUTH</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#signature">Signature</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#location">Visit</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-badge">Vienna's First District</span>
+            <h1>The Truth Wollzeile</h1>
+            <p>Specialty coffee and artisanal desserts in the heart of Vienna's historic center</p>
+            <a href="#menu" class="btn btn-primary">Explore Our Menu</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="section-container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <div class="about-image-main">☕</div>
+                    <div class="about-image-accent">
+                        <span class="rating-number">4.8</span>
+                        <span class="rating-text">★ Rating</span>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <h3>Where Quality Meets Simplicity</h3>
+                    <p>Opened in late 2021 by owner Cuneyt Kilic, The Truth Wollzeile occupies a small, modern space tucked in a passage off Wollzeile Street. Our café is designed around the "coffee to go" concept, emphasizing premium Italian coffee from Caffè Diemme and high-quality artisanal sweets.</p>
+                    <p>Despite our compact size, we offer a cozy, stylish environment with our signature minimalist aesthetic and limited outdoor seating for those who wish to linger a little longer.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <div class="feature-icon">🇮🇹</div>
+                            <div class="feature-text">Italian Coffee</div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">🎨</div>
+                            <div class="feature-text">Minimalist Design</div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">✨</div>
+                            <div class="feature-text">Artisanal Quality</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu" id="menu">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Our Menu</h2>
+                <div class="divider"></div>
+                <p>Expertly crafted espresso drinks paired with our selection of artisanal pastries and signature desserts</p>
+            </div>
+            <div class="menu-categories">
+                <div class="menu-category">
+                    <div class="menu-icon">☕</div>
+                    <h3>Coffee</h3>
+                    <p>Premium Italian coffee from Caffè Diemme. From perfectly pulled espressos to silky cappuccinos and specialty lattes, each cup is crafted with care.</p>
+                    <span class="menu-tag">Caffè Diemme</span>
+                </div>
+                <div class="menu-category">
+                    <div class="menu-icon">🍰</div>
+                    <h3>Cheesecake</h3>
+                    <p>Our famous San Sebastián cheesecake with its creamy interior and caramelized top. Available in classic, pistachio, and chocolate flavors.</p>
+                    <span class="menu-tag">Signature</span>
+                </div>
+                <div class="menu-category">
+                    <div class="menu-icon">🥐</div>
+                    <h3>Pastries</h3>
+                    <p>A rotating selection of artisanal treats including fresh donuts, delicate tartlets, and savory filled rolls made with premium ingredients.</p>
+                    <span class="menu-tag">Daily Fresh</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Signature Section -->
+    <section class="signature" id="signature">
+        <div class="section-container">
+            <h2>The Best Cheesecake in Vienna</h2>
+            <div class="divider"></div>
+            <p>Our Basque-style San Sebastián cheesecake has become legendary among locals and visitors alike. With its signature caramelized exterior and impossibly creamy center, it's the star of our menu and the reason many call us home.</p>
+            
+            <div class="cheesecake-flavors">
+                <div class="flavor">
+                    <div class="flavor-circle classic">🧀</div>
+                    <span class="flavor-name">Classic</span>
+                </div>
+                <div class="flavor">
+                    <div class="flavor-circle pistachio">🌿</div>
+                    <span class="flavor-name">Pistachio</span>
+                </div>
+                <div class="flavor">
+                    <div class="flavor-circle chocolate">🍫</div>
+                    <span class="flavor-name">Chocolate</span>
+                </div>
+            </div>
+
+            <div class="dietary-info">
+                <div class="dietary-badges">
+                    <div class="dietary-badge">
+                        <span>🌱</span>
+                        <span>Vegan Options Available</span>
+                    </div>
+                    <div class="dietary-badge">
+                        <span>🌾</span>
+                        <span>Gluten-Free Options Available</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews" id="reviews">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>What People Say</h2>
+                <div class="divider"></div>
+                <p>Over 1,300 reviews with an average rating of 4.8 out of 5 stars</p>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-quote">"</div>
+                    <p class="review-text">Absolutely the best cheesecake in Vienna! The pistachio flavor is heavenly and the coffee is perfectly made. A hidden gem!</p>
+                    <div class="review-stars">★★★★★</div>
+                    <span class="review-author">- Google Review</span>
+                </div>
+                <div class="review-card">
+                    <div class="review-quote">"</div>
+                    <p class="review-text">Small but cozy place with amazing desserts. The staff is incredibly friendly and the quality is outstanding. Worth every visit!</p>
+                    <div class="review-stars">★★★★★</div>
+                    <span class="review-author">- TripAdvisor</span>
+                </div>
+                <div class="review-card">
+                    <div class="review-quote">"</div>
+                    <p class="review-text">Perfect spot for coffee lovers. The Italian espresso is authentic and rich. The minimalist atmosphere makes it feel like a true escape.</p>
+                    <div class="review-stars">★★★★★</div>
+                    <span class="review-author">- Google Review</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location" id="location">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Visit Us</h2>
+                <div class="divider"></div>
+                <p>Find us in Vienna's historic Innere Stadt, just steps from the city center</p>
+            </div>
+            <div class="location-grid">
+                <div class="location-info">
+                    <h3>Practical Details</h3>
+                    <div class="info-item">
+                        <div class="info-icon">📍</div>
+                        <div class="info-content">
+                            <h4>Address</h4>
+                            <p>Wollzeile 5, 1010 Wien, Austria</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">📞</div>
+                        <div class="info-content">
+                            <h4>Phone</h4>
+                            <p><a href="tel:+436604443630">0660 4443630</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">🕐</div>
+                        <div class="info-content">
+                            <h4>Opening Hours</h4>
+                            <p>Monday – Friday: 09:30 – 17:30</p>
+                            <p>Saturday – Sunday: 09:30 – 18:00</p>
+                        </div>
+                    </div>
+                    <div class="amenities">
+                        <div class="amenity">
+                            <span>🥡</span>
+                            <span>Takeaway</span>
+                        </div>
+                        <div class="amenity">
+                            <span>💳</span>
+                            <span>Card Payments</span>
+                        </div>
+                        <div class="amenity">
+                            <span>♿</span>
+                            <span>Wheelchair Accessible</span>
+                        </div>
+                        <div class="amenity">
+                            <span>🪑</span>
+                            <span>Outdoor Seating</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="location-map">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2659.0!2d16.375!3d48.208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476d079f3b1e5b1f%3A0x0!2sWollzeile%205%2C%201010%20Wien!5e0!3m2!1sen!2sat!4v1234567890"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>The Truth Wollzeile</h3>
+                <p>A specialty coffee shop and dessert café in Vienna's historic first district. Known for our minimalist style, premium Italian coffee, and signature Basque-style San Sebastián cheesecake.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#menu">Our Menu</a></li>
+                    <li><a href="#signature">Signature Cheesecake</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#location">Visit Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-hours">
+                <h4>Hours</h4>
+                <p>Mon – Fri: 09:30 – 17:30</p>
+                <p>Sat – Sun: 09:30 – 18:00</p>
+                <p style="margin-top: 1rem;">Wollzeile 5</p>
+                <p>1010 Wien, Austria</p>
+                <p style="margin-top: 0.5rem;"><a href="tel:+436604443630" style="color: inherit; text-decoration: none;">0660 4443630</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 The Truth Wollzeile. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const navHeight = document.getElementById('navbar').offsetHeight;
+                    const targetPosition = target.offsetTop - navHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
