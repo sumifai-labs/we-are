@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Fokus | Specialty Coffee & Co-Working in Vienna</title>
+    <meta name="description" content="Café Fokus - Specialty coffeehouse in Vienna's Leopoldstadt. Artisanal coffee, vegan pastries, and a relaxed co-working atmosphere near Augarten.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-cream: #F5F1EB;
+            --color-brown: #4A3728;
+            --color-brown-light: #6B5344;
+            --color-green: #5C7C5C;
+            --color-green-light: #7A9A7A;
+            --color-accent: #C4A77D;
+            --color-white: #FFFFFF;
+            --color-text: #2D2A26;
+            --color-text-light: #5A5652;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-cream);
+            color: var(--color-text);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(245, 241, 235, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            border-bottom: 1px solid rgba(74, 55, 40, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-brown);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--color-brown-light);
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-green);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 6rem 2rem 4rem;
+            background: linear-gradient(135deg, var(--color-cream) 0%, #EDE8E0 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(92, 124, 92, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(196, 167, 125, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-tagline {
+            font-size: 0.9rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--color-green);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(3rem, 8vw, 5.5rem);
+            color: var(--color-brown);
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            color: var(--color-text-light);
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
+            font-weight: 300;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-primary {
+            background: var(--color-brown);
+            color: var(--color-white);
+        }
+
+        .btn-primary:hover {
+            background: var(--color-brown-light);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(74, 55, 40, 0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--color-brown);
+            border: 2px solid var(--color-brown);
+        }
+
+        .btn-secondary:hover {
+            background: var(--color-brown);
+            color: var(--color-white);
+        }
+
+        /* Coffee Icon Animation */
+        .coffee-icon {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+            display: inline-block;
+            animation: steam 2s ease-in-out infinite;
+        }
+
+        @keyframes steam {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Sections */
+        section {
+            padding: 6rem 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--color-brown);
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: var(--color-text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* About Section */
+        .about {
+            background: var(--color-white);
+        }
+
+        .about-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--color-brown);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text p {
+            color: var(--color-text-light);
+            margin-bottom: 1rem;
+        }
+
+        .about-image {
+            background: linear-gradient(135deg, var(--color-green-light) 0%, var(--color-green) 100%);
+            border-radius: 20px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-image::before {
+            content: '☕';
+            font-size: 8rem;
+            opacity: 0.3;
+        }
+
+        /* Features Section */
+        .features {
+            background: var(--color-cream);
+        }
+
+        .features-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: var(--color-white);
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(74, 55, 40, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .feature-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--color-brown);
+            margin-bottom: 1rem;
+        }
+
+        .feature-card p {
+            color: var(--color-text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Menu Section */
+        .menu {
+            background: var(--color-brown);
+            color: var(--color-white);
+        }
+
+        .menu .section-header h2,
+        .menu .section-header p {
+            color: var(--color-white);
+        }
+
+        .menu-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .menu-category h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--color-accent);
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .menu-item-name {
+            font-weight: 500;
+        }
+
+        .menu-item-tag {
+            font-size: 0.75rem;
+            background: var(--color-green);
+            padding: 0.2rem 0.5rem;
+            border-radius: 10px;
+            margin-left: 0.5rem;
+        }
+
+        .menu-note {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .menu-note span {
+            color: var(--color-accent);
+            font-weight: 600;
+        }
+
+        /* Founders Section */
+        .founders {
+            background: var(--color-white);
+        }
+
+        .founders-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .founders-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .founder-card {
+            padding: 2rem;
+        }
+
+        .founder-avatar {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-brown-light) 100%);
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        .founder-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--color-brown);
+            margin-bottom: 0.5rem;
+        }
+
+        .founder-card p {
+            color: var(--color-text-light);
+            font-size: 0.9rem;
+        }
+
+        .founders-story {
+            margin-top: 3rem;
+            padding: 2rem;
+            background: var(--color-cream);
+            border-radius: 20px;
+        }
+
+        .founders-story p {
+            color: var(--color-text-light);
+            font-style: italic;
+        }
+
+        /* Location Section */
+        .location {
+            background: var(--color-cream);
+        }
+
+        .location-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+        }
+
+        .location-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--color-brown);
+            margin-bottom: 1.5rem;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .info-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .info-text h4 {
+            font-weight: 600;
+            color: var(--color-brown);
+            margin-bottom: 0.25rem;
+        }
+
+        .info-text p {
+            color: var(--color-text-light);
+            font-size: 0.95rem;
+        }
+
+        .map-container {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(74, 55, 40, 0.1);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--color-brown);
+            color: var(--color-white);
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-tagline {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 2rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .social-links a {
+            color: var(--color-white);
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .social-links a:hover {
+            transform: scale(1.2);
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .footer-bottom p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--color-brown);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--color-cream);
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1rem;
+                text-align: center;
+                border-bottom: 1px solid rgba(74, 55, 40, 0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-description {
+                font-size: 1rem;
+            }
+
+            section {
+                padding: 4rem 1.5rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .location-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">Café Fokus</a>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Experience</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#founders">Our Story</a></li>
+                <li><a href="#location">Visit Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="coffee-icon">☕</span>
+            <p class="hero-tagline">Specialty Coffee & Co-Working</p>
+            <h1>Café Fokus</h1>
+            <p class="hero-description">
+                Where artisanal coffee culture meets relaxed co-working ambience. 
+                Your focus point for quality, community, and creativity in Vienna's Leopoldstadt.
+            </p>
+            <div class="hero-cta">
+                <a href="#location" class="btn btn-primary">Find Us</a>
+                <a href="#menu" class="btn btn-secondary">View Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-grid">
+            <div class="about-text">
+                <h3>A Space for Focus & Creativity</h3>
+                <p>
+                    Founded in 2023 by Florent Vatin and Jan Federer, Café Fokus occupies a charming 
+                    two-story space near Augarten park in Vienna's vibrant 2nd district.
+                </p>
+                <p>
+                    Our minimalist design philosophy combines wooden furnishings with lush greenery, 
+                    creating an inviting environment perfectly suited for study, remote work, or 
+                    simply enjoying a quality cup of coffee.
+                </p>
+                <p>
+                    Known for our sustainable ethos and vegan-friendly selection, we've quickly 
+                    become a beloved gathering spot for locals and visitors alike.
+                </p>
+            </div>
+            <div class="about-image"></div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="section-header">
+            <h2>The Fokus Experience</h2>
+            <p>Everything you need for a productive and enjoyable visit</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <span class="feature-icon">📶</span>
+                <h3>Free High-Speed Wi-Fi</h3>
+                <p>Stay connected with our reliable, fast internet perfect for video calls and remote work.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🔌</span>
+                <h3>Laptop-Friendly</h3>
+                <p>Numerous power outlets and comfortable seating designed for extended work sessions.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🌱</span>
+                <h3>Sustainable & Vegan</h3>
+                <p>Eco-conscious choices throughout, with oat milk at no extra cost and vegan pastry options.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🎵</span>
+                <h3>Calm Atmosphere</h3>
+                <p>Carefully curated background music creates the perfect ambience for concentration.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🌿</span>
+                <h3>Schanigarten</h3>
+                <p>Enjoy our cozy outdoor seating area, perfect for sunny days near Augarten park.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🏃</span>
+                <h3>Takeaway Ready</h3>
+                <p>Grab your favorite coffee to go for leisurely strolls through the neighborhood.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="section-header">
+            <h2>Our Menu</h2>
+            <p>High-quality coffee from Nomad Roasters, Barcelona</p>
+        </div>
+        <div class="menu-grid">
+            <div class="menu-category">
+                <h3>Coffee</h3>
+                <div class="menu-item">
+                    <span class="menu-item-name">Espresso</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">Flat White</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">Cappuccino</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">Hand Brew / Filter</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">Cold Brew</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">Americano</span>
+                </div>
+            </div>
+            <div class="menu-category">
+                <h3>Pastries & Treats</h3>
+                <div class="menu-item">
+                    <span class="menu-item-name">Croissant <span class="menu-item-tag">Vegan</span></span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">Pain au Chocolat <span class="menu-item-tag">Vegan</span></span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">Nut Pastries</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">Seasonal Specials</span>
+                </div>
+            </div>
+        </div>
+        <div class="menu-note">
+            <span>🥛 Oat milk at no extra cost</span> — Aligning with our inclusive approach to specialty beverages
+        </div>
+    </section>
+
+    <!-- Founders Section -->
+    <section id="founders" class="founders">
+        <div class="founders-content">
+            <div class="section-header">
+                <h2>Our Story</h2>
+                <p>The people behind your daily cup of focus</p>
+            </div>
+            <div class="founders-grid">
+                <div class="founder-card">
+                    <div class="founder-avatar">🛹</div>
+                    <h3>Florent Vatin</h3>
+                    <p>Co-Founder</p>
+                </div>
+                <div class="founder-card">
+                    <div class="founder-avatar">🛹</div>
+                    <h3>Jan Federer</h3>
+                    <p>Co-Founder</p>
+                </div>
+            </div>
+            <div class="founders-story">
+                <p>
+                    "As avid skateboarders and coffee enthusiasts, we envisioned Café Fokus as a 
+                    'focus point' for quality coffee, community, and creativity in our neighborhood. 
+                    Since opening in August 2023, we've been proud to create a space where people 
+                    can come together, get work done, and enjoy exceptional coffee in a welcoming environment."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="location">
+        <div class="section-header">
+            <h2>Visit Us</h2>
+            <p>Find us in the heart of Leopoldstadt, near Augarten</p>
+        </div>
+        <div class="location-grid">
+            <div class="location-info">
+                <h3>Get in Touch</h3>
+                <div class="info-item">
+                    <span class="info-icon">📍</span>
+                    <div class="info-text">
+                        <h4>Address</h4>
+                        <p>Kleine Pfarrgasse 28<br>1020 Wien, Austria</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">🚇</span>
+                    <div class="info-text">
+                        <h4>Getting Here</h4>
+                        <p>Located in Vienna's 2nd district, Leopoldstadt. Near Augarten park, easily accessible by public transport.</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">🌳</span>
+                    <div class="info-text">
+                        <h4>Nearby</h4>
+                        <p>Perfect stop for takeaway coffee before a leisurely stroll through Augarten park.</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">🏢</span>
+                    <div class="info-text">
+                        <h4>Business</h4>
+                        <p>CAFÉ FOKUS VATIN FEDERER OG<br>Established August 22, 2023</p>
+                    </div>
+                </div>
+            </div>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2658.5!2d16.3777!3d48.2244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476d07a02a5f5555%3A0x1234567890abcdef!2sKleine%20Pfarrgasse%2028%2C%201020%20Wien!5e0!3m2!1sen!2sat!4v1234567890"
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Café Fokus</div>
+            <p class="footer-tagline">Your focus point for quality coffee & community</p>
+            <div class="social-links">
+                <a href="#" aria-label="Instagram">📷</a>
+                <a href="#" aria-label="Facebook">👥</a>
+            </div>
+            <div class="footer-bottom">
+                <p>Kleine Pfarrgasse 28, 1020 Wien, Austria</p>
+                <p>© 2026 CAFÉ FOKUS VATIN FEDERER OG. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.boxShadow = '0 2px 20px rgba(74, 55, 40, 0.1)';
+            } else {
+                nav.style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
