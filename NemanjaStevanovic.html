@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nemanja Stevanovic | Visionär, Coach & Manifestations-Leader</title>
+    <meta name="description" content="Nemanja Stevanovic - Visionär, Coach und Manifestations-Leader. Entfalte dein volles Potenzial mit RELIFE Academy. Macht, Manifestation, Freiheit.">
+    <meta name="keywords" content="Nemanja Stevanovic, RELIFE Academy, Manifestation, Coach, Potenzialanalyse, Persönlichkeitsentwicklung, Dubai">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Person Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Nemanja Stevanovic",
+        "jobTitle": "Visionär, Coach & Manifestations-Leader",
+        "description": "Mentor für Persönlichkeitsentwicklung und Manifestation bei RELIFE Academy",
+        "url": "https://www.instagram.com/nemanja8stevanovic/",
+        "sameAs": [
+            "https://www.instagram.com/nemanja8stevanovic/"
+        ],
+        "worksFor": {
+            "@type": "Organization",
+            "name": "RELIFE Academy"
+        }
+    }
+    </script>
+
+    <style>
+        :root {
+            --color-black: #0A0A0A;
+            --color-dark: #111111;
+            --color-dark-gray: #1A1A1A;
+            --color-gray: #2A2A2A;
+            --color-light-gray: #888888;
+            --color-gold: #D4AF37;
+            --color-gold-light: #E8C55B;
+            --color-gold-dark: #B8960E;
+            --color-white: #FFFFFF;
+            --color-cream: #F5F5F0;
+            --color-purple: #6B4FAD;
+            --color-purple-light: #8B6FCD;
+            --font-serif: 'Playfair Display', Georgia, serif;
+            --font-sans: 'Raleway', 'Helvetica Neue', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--color-black);
+            color: var(--color-white);
+            line-height: 1.7;
+        }
+
+        /* Animated Background */
+        .bg-gradient {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(ellipse at 20% 20%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(107, 79, 173, 0.08) 0%, transparent 50%),
+                linear-gradient(180deg, var(--color-black) 0%, var(--color-dark) 100%);
+            z-index: -1;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 10, 10, 0.9);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--color-white);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-eye {
+            font-size: 1.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--color-light-gray);
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-gold);
+        }
+
+        .nav-cta {
+            background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-dark) 100%);
+            color: var(--color-black) !important;
+            padding: 0.7rem 1.5rem;
+            border-radius: 30px;
+            font-weight: 600 !important;
+            transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--color-gold);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 8rem 2rem 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+            50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.8; }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+        }
+
+        .hero-eye {
+            font-size: 5rem;
+            margin-bottom: 2rem;
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        .hero-location {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            padding: 0.5rem 1.25rem;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            color: var(--color-gold);
+            margin-bottom: 2rem;
+            letter-spacing: 1px;
+        }
+
+        .hero h1 {
+            font-family: var(--font-serif);
+            font-size: clamp(2.5rem, 7vw, 4.5rem);
+            font-weight: 700;
+            color: var(--color-white);
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: var(--color-light-gray);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 650px;
+            margin: 0 auto 2.5rem;
+            font-weight: 300;
+            line-height: 1.9;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1.1rem 2.5rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-dark) 100%);
+            color: var(--color-black);
+            border: none;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--color-white);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--color-gold);
+            color: var(--color-gold);
+        }
+
+        /* Values Pills */
+        .values-pills {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .value-pill {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 0.75rem 1.5rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--color-white);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .value-pill-icon {
+            font-size: 1.1rem;
+        }
+
+        /* Sections */
+        section {
+            padding: 7rem 2rem;
+            position: relative;
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-badge {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            padding: 0.5rem 1.25rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            color: var(--color-gold);
+            margin-bottom: 1.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .section-header h2 {
+            font-family: var(--font-serif);
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 600;
+            color: var(--color-white);
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: var(--color-light-gray);
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+
+        /* Philosophy Section */
+        .philosophy {
+            background: linear-gradient(180deg, transparent 0%, rgba(212, 175, 55, 0.03) 50%, transparent 100%);
+        }
+
+        .philosophy-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .philosophy-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .philosophy-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--color-gold), var(--color-purple));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .philosophy-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+
+        .philosophy-card:hover::before {
+            opacity: 1;
+        }
+
+        .philosophy-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .philosophy-card h3 {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            color: var(--color-gold);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .philosophy-card p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+
+        /* About Section */
+        .about {
+            background: var(--color-dark);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image-frame {
+            background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-purple) 100%);
+            padding: 4px;
+            border-radius: 20px;
+        }
+
+        .about-image-inner {
+            background: url('nemanjaStevanovic.jpg') center center / cover no-repeat;
+            border-radius: 18px;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-image-inner::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+            background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 100%);
+        }
+
+        .about-badge {
+            position: absolute;
+            bottom: 2rem;
+            left: 2rem;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 1rem 1.5rem;
+            border-radius: 15px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .about-badge p {
+            color: var(--color-gold);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .about-content h3 {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            color: var(--color-white);
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+        }
+
+        .about-content h3 span {
+            color: var(--color-gold);
+        }
+
+        .about-content p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+            line-height: 1.9;
+        }
+
+        .about-highlights {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+        }
+
+        .highlight-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .highlight-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        .highlight-text {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--color-white);
+        }
+
+        /* RELIFE Section */
+        .relife {
+            background: linear-gradient(180deg, var(--color-dark) 0%, var(--color-black) 100%);
+        }
+
+        .relife-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .relife-logo {
+            font-family: var(--font-serif);
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-purple-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .relife-tagline {
+            font-size: 1.1rem;
+            color: var(--color-light-gray);
+            margin-bottom: 2rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .relife-description {
+            font-size: 1.15rem;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.9;
+            margin-bottom: 3rem;
+            font-weight: 300;
+        }
+
+        .relife-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .relife-feature {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .relife-feature-icon {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .relife-feature h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--color-white);
+        }
+
+        /* Message Section */
+        .message {
+            background: var(--color-black);
+            position: relative;
+        }
+
+        .message::before {
+            content: '"';
+            position: absolute;
+            top: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: var(--font-serif);
+            font-size: 15rem;
+            color: rgba(212, 175, 55, 0.05);
+            line-height: 1;
+        }
+
+        .message-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .message-quote {
+            font-family: var(--font-serif);
+            font-size: clamp(1.5rem, 4vw, 2.25rem);
+            font-weight: 400;
+            color: var(--color-white);
+            line-height: 1.6;
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+
+        .message-quote span {
+            color: var(--color-gold);
+        }
+
+        .message-author {
+            font-size: 1rem;
+            color: var(--color-gold);
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--color-dark-gray) 0%, var(--color-gray) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-badge {
+            display: inline-block;
+            background: var(--color-gold);
+            color: var(--color-black);
+            padding: 0.5rem 1.25rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .cta-content h2 {
+            font-family: var(--font-serif);
+            font-size: clamp(2rem, 5vw, 3rem);
+            color: var(--color-white);
+            margin-bottom: 1rem;
+        }
+
+        .cta-content p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--color-black);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info h3 {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            color: var(--color-white);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 2rem;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        .contact-text h4 {
+            font-weight: 600;
+            color: var(--color-gold);
+            margin-bottom: 0.25rem;
+            font-size: 1rem;
+        }
+
+        .contact-text p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        .contact-text a {
+            color: var(--color-white);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-text a:hover {
+            color: var(--color-gold);
+        }
+
+        .contact-social {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--color-gold);
+            border-color: var(--color-gold);
+            transform: translateY(-3px);
+        }
+
+        .contact-calendly {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+        }
+
+        .contact-calendly h3 {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            color: var(--color-white);
+            margin-bottom: 1rem;
+        }
+
+        .contact-calendly p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        .calendly-badge {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--color-gold);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--color-dark);
+            padding: 4rem 2rem 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-family: var(--font-serif);
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: var(--color-white);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .footer-tagline {
+            color: var(--color-light-gray);
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--color-light-gray);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--color-gold);
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--color-light-gray);
+            font-size: 0.85rem;
+        }
+
+        .footer-bottom a {
+            color: var(--color-light-gray);
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .philosophy-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .about-image {
+                order: -1;
+            }
+
+            .about-image-inner {
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--color-dark);
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1.5rem;
+                text-align: center;
+                border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-cta {
+                margin: 0 auto;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .about-highlights {
+                grid-template-columns: 1fr;
+            }
+
+            .values-pills {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            section {
+                padding: 5rem 1.5rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-eye {
+                font-size: 3.5rem;
+            }
+
+            .philosophy-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .relife-features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-gradient"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-eye">👁️</span>
+                Nemanja Stevanovic
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#philosophy">Philosophie</a></li>
+                <li><a href="#about">Über Mich</a></li>
+                <li><a href="#relife">RELIFE</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+                <li><a href="https://calendly.com/nemanjastevanovic/potenzial-analyse-follow-up-60?month=2026-02" target="_blank" class="nav-cta">Potenzialanalyse</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-eye">👁️</span>
+            <div class="hero-location">
+                <span>📍</span>
+                <span>Dubai, UAE</span>
+            </div>
+            <h1>Nemanja <span>Stevanovic</span></h1>
+            <p class="hero-subtitle">Visionär • Coach • Manifestations-Leader</p>
+            <p>Ich unterstütze Menschen dabei, ihr volles Potenzial zu entfalten und ein neues Leben zu gestalten. Durch bewusste Transformation, klare Ausrichtung und die Kraft der Manifestation.</p>
+            <div class="hero-cta">
+                <a href="https://calendly.com/nemanjastevanovic/potenzial-analyse-follow-up-60?month=2026-02" target="_blank" class="btn btn-primary">📅 Kostenlose Potenzialanalyse</a>
+                <a href="https://www.instagram.com/nemanja8stevanovic/" target="_blank" class="btn btn-secondary">📷 Instagram folgen</a>
+            </div>
+            <div class="values-pills">
+                <div class="value-pill">
+                    <span class="value-pill-icon">⚡</span>
+                    <span>MACHT</span>
+                </div>
+                <div class="value-pill">
+                    <span class="value-pill-icon">✨</span>
+                    <span>MANIFESTATION</span>
+                </div>
+                <div class="value-pill">
+                    <span class="value-pill-icon">🦅</span>
+                    <span>FREIHEIT</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="philosophy" id="philosophy">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-badge">Meine Philosophie</span>
+                <h2>Die drei Säulen der Transformation</h2>
+                <p>Drei zentrale Werte, die als emotionale Leitmotive für dein neues Leben dienen</p>
+            </div>
+            <div class="philosophy-grid">
+                <div class="philosophy-card">
+                    <span class="philosophy-icon">⚡</span>
+                    <h3>Macht</h3>
+                    <p>Die Fähigkeit, dein eigenes Handeln bewusst zu steuern und Einfluss auf deine eigene Realität zu nehmen. Übernimm die Kontrolle über dein Leben.</p>
+                </div>
+                <div class="philosophy-card">
+                    <span class="philosophy-icon">✨</span>
+                    <h3>Manifestation</h3>
+                    <p>Die bewusste Erschaffung deines eigenen Lebens durch Gedanken, Überzeugungen und klare innere Ausrichtung. Du erschaffst deine Realität.</p>
+                </div>
+                <div class="philosophy-card">
+                    <span class="philosophy-icon">🦅</span>
+                    <h3>Freiheit</h3>
+                    <p>Nicht nur finanziell oder räumlich, sondern vor allem innerlich frei zu sein und selbstbestimmt zu leben. Befreie dich von allen Limitierungen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="section-container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <div class="about-image-frame">
+                        <div class="about-image-inner"></div>
+                    </div>
+                    <div class="about-badge">
+                        <p>🌍 RELIFE Academy Mentor</p>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <span class="section-badge">Über Mich</span>
+                    <h3>Wer ist <span>Nemanja?</span></h3>
+                    <p>Ich bin Visionär und Mentor mit der Mission, Menschen zu helfen, aus dem Gewöhnlichen auszubrechen und ein erfülltes, bewusstes und erfolgreiches Leben zu führen.</p>
+                    <p>Als Teil der RELIFE Academy und basiert in Dubai – einem globalen Knotenpunkt für internationale Unternehmer und persönliche Entwicklung – begleite ich Menschen auf ihrer Reise zu mehr Bewusstsein, Selbstverantwortung und Transformation.</p>
+                    <p>Meine Botschaft ist klar: Wenn du immer dasselbe machst wie gestern, wirst du auch morgen dasselbe Leben haben. Es ist Zeit, den Autopilot zu verlassen und bewusst zu leben.</p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">🎯</div>
+                            <span class="highlight-text">Bewusste Transformation</span>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">🧠</div>
+                            <span class="highlight-text">Mindset Coaching</span>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">🌍</div>
+                            <span class="highlight-text">Internationale Events</span>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">💫</div>
+                            <span class="highlight-text">Manifestations-Guide</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Message Section -->
+    <section class="message">
+        <div class="section-container">
+            <div class="message-content">
+                <p class="message-quote">"Wenn du immer dasselbe machst wie gestern, wirst du auch <span>morgen dasselbe Leben</span> haben. Durchbrich den Autopilot. Wach auf. <span>Erschaffe bewusst.</span>"</p>
+                <span class="message-author">— Nemanja Stevanovic</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- RELIFE Section -->
+    <section class="relife" id="relife">
+        <div class="section-container">
+            <div class="relife-content">
+                <span class="section-badge">Academy & Community</span>
+                <div class="relife-logo">RELIFE Academy</div>
+                <p class="relife-tagline">Wachstum von innen nach außen</p>
+                <p class="relife-description">Die RELIFE Academy ist eine transformative Online-Plattform und Coaching-Community, die Menschen hilft, ihr persönliches Potenzial auszuschöpfen. Gemeinsam streben wir nach mehr Energie, Erfüllung, Lebensfreude, Gesundheit, Freiheit und messbaren Resultaten im Leben.</p>
+                <div class="relife-features">
+                    <div class="relife-feature">
+                        <div class="relife-feature-icon">🎓</div>
+                        <h4>Academy-Programme</h4>
+                    </div>
+                    <div class="relife-feature">
+                        <div class="relife-feature-icon">🎯</div>
+                        <h4>Masterclasses</h4>
+                    </div>
+                    <div class="relife-feature">
+                        <div class="relife-feature-icon">🤝</div>
+                        <h4>Mastermind-Gruppen</h4>
+                    </div>
+                    <div class="relife-feature">
+                        <div class="relife-feature-icon">🌍</div>
+                        <h4>Live Events</h4>
+                    </div>
+                    <div class="relife-feature">
+                        <div class="relife-feature-icon">📊</div>
+                        <h4>Potenzialanalyse</h4>
+                    </div>
+                    <div class="relife-feature">
+                        <div class="relife-feature-icon">👥</div>
+                        <h4>Community</h4>
+                    </div>
+                </div>
+                <a href="https://calendly.com/nemanjastevanovic/potenzial-analyse-follow-up-60?month=2026-02" target="_blank" class="btn btn-primary">🚀 Jetzt Potenzialanalyse buchen</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="section-container">
+            <div class="cta-content">
+                <span class="cta-badge">✨ Kostenlos</span>
+                <h2>Bereit für deine Transformation?</h2>
+                <p>Buche jetzt deine kostenfreie RELIFE Potenzialanalyse und entdecke, wie du dein volles Potenzial entfalten kannst. Der erste Schritt in dein neues Leben.</p>
+                <div class="cta-buttons">
+                    <a href="https://calendly.com/nemanjastevanovic/potenzial-analyse-follow-up-60?month=2026-02" target="_blank" class="btn btn-primary">📅 Potenzialanalyse buchen</a>
+                    <a href="https://www.instagram.com/nemanja8stevanovic/" target="_blank" class="btn btn-secondary">📷 Auf Instagram folgen</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-badge">Kontakt</span>
+                <h2>Lass uns verbinden</h2>
+                <p>Folge mir auf Instagram oder buche direkt deine kostenfreie Potenzialanalyse</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Connect with Nemanja</h3>
+                    <p>Ich teile regelmäßig motivierende Inhalte, Insights zu Manifestation, Bewusstsein und Transformation. Folge mir auf Instagram für tägliche Inspiration.</p>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-text">
+                            <h4>Standort</h4>
+                            <p>Dubai, UAE</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📷</div>
+                        <div class="contact-text">
+                            <h4>Instagram</h4>
+                            <p><a href="https://www.instagram.com/nemanja8stevanovic/" target="_blank">@nemanjastevanovic</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">🌍</div>
+                        <div class="contact-text">
+                            <h4>Academy</h4>
+                            <p>RELIFE Academy</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-social">
+                        <a href="https://www.instagram.com/nemanja8stevanovic/" target="_blank" class="social-link" aria-label="Instagram">📷</a>
+                    </div>
+                </div>
+
+                <div class="contact-calendly">
+                    <span class="calendly-badge">✨ Kostenlos & unverbindlich</span>
+                    <h3>Kostenfreie RELIFE Potenzialanalyse</h3>
+                    <p>Entdecke in einem persönlichen Gespräch, wie du dein volles Potenzial entfalten und ein neues Leben gestalten kannst. Dieser erste Schritt kann alles verändern.</p>
+                    <a href="https://calendly.com/nemanjastevanovic/potenzial-analyse-follow-up-60?month=2026-02" target="_blank" class="btn btn-primary">📅 Termin buchen</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span>👁️</span>
+                Nemanja Stevanovic
+            </div>
+            <p class="footer-tagline">Macht • Manifestation • Freiheit</p>
+            <div class="footer-links">
+                <a href="#philosophy">Philosophie</a>
+                <a href="#about">Über Mich</a>
+                <a href="#relife">RELIFE Academy</a>
+                <a href="https://www.instagram.com/nemanja8stevanovic/" target="_blank">Instagram</a>
+                <a href="https://calendly.com/nemanjastevanovic/potenzial-analyse-follow-up-60?month=2026-02" target="_blank">Potenzialanalyse</a>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Nemanja Stevanovic. Alle Rechte vorbehalten.</p>
+                <p style="margin-top: 0.5rem;">Powered by <a href="https://sumifai.com/web/">sumifai.web</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const navHeight = document.getElementById('navbar').offsetHeight;
+                    const targetPosition = target.offsetTop - navHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
